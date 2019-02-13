@@ -137,7 +137,7 @@ if not args.skip:
     col_list = total_df.columns.tolist()
     
 
-    # pandas is a piece of shit
+    # Need to retype the columns
     for col in housing_dtypes:
         if col in col_list:
             # print(f'Found {col} in col list')
@@ -159,7 +159,7 @@ if not args.skip:
     total_df['Fence'] = total_df['Fence'].cat.add_categories(['None']).fillna('None')
     total_df['MiscFeature'] = total_df['MiscFeature'].cat.add_categories(['None']).fillna('None')
 
-    # Now to check and see what the real amoutn of n/a responses are
+    # Now to check and see what the real amount of n/a responses are
     print('-'*60)
     print('Printing out missing elements as percentage of rows')
     n_rows = len(total_df.index)
