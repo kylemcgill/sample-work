@@ -238,8 +238,6 @@ print(f'Graidient Boost scores: {grad_scores}')
 print(f'mean: {grad_scores.mean()}, std: {grad_scores.std()}')
 
 
-
-# quit()
 clf_ridge.fit(train_x, log_train_y)
 
 # Create our predictions on the test set
