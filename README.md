@@ -13,7 +13,9 @@ As of right now, this sample project scores in the Top 51% of the [Kaggle compet
 A project centered around learning the monte carlo method to approximate integrals as well as learning how to use the method to simulate options pricing using simple models.  
 
 *coinflip*: The most simple monte carlo method for simulating a coin flip `N` times.
+
 *findpi*: Using the monte carlo method to estimate `PI` by randomly sampling the first quadrant of an inscribed unit circle.
+
 *stockprice*: Uses Brownian Motion to generate random price walks. In this example, the starting price and subsequent drft and variance were chosen at random.
 
 **opencv Tutorials**
