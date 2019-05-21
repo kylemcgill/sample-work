@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import xgboost as xgb
+import explore
 from sklearn import linear_model, tree
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import KFold, cross_val_score, train_test_split
@@ -21,6 +22,8 @@ parser.add_argument('-i', '--indir', help='Specifies the input dir to read both 
 parser.add_argument('-o', '--outdir', help='Specifies the output dir to write any files to',
                     action='store', default='../out/')
 parser.add_argument('-s', '--skip', help='Tells housing_price_prediction to skip the preprocessing step and go straight to modeling',
+                    action='store_true')
+parser.add_argument('-x', '--explore', help='Runs the explore package instead of building models',
                     action='store_true')
 
 args = parser.parse_args()
@@ -112,9 +115,13 @@ housing_dtypes = {
 
 
 # Try loading the data
-train = pd.read_csv('../in/train.csv')
-test = pd.read_csv('../in/test.csv')
+train = pd.read_csv(args.indir + '/train.csv')
+test = pd.read_csv(args.indir + '/test.csv')
 
+if args.explore:
+    explore.explore_data(data=train, dtypes=housing_dtypes)
+    print('done.')
+    quit()
 train_id = train['Id']
 test_id = test['Id']
 
