@@ -10,6 +10,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import KFold, cross_val_score, train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 
+
 print('Starting Housing Price Prediction...')
 
 parser = argparse.ArgumentParser(description='Trains and tests models predicting house sell prices.')
@@ -245,10 +246,17 @@ print(f'Graidient Boost scores: {grad_scores}')
 print(f'mean: {grad_scores.mean()}, std: {grad_scores.std()}')
 
 
-clf_ridge.fit(train_x, log_train_y)
+'''
+#### FORK ####
+'''
+# best_clf = explore.gradient_boost(train_x, log_train_y)
+best_clf = explore.ridge_regression(train_x, log_train_y)
+
+
+best_clf.fit(train_x, log_train_y)
 
 # Create our predictions on the test set
-predictions = clf_ridge.predict(test_x)
+predictions = best_clf.predict(test_x)
 out_pred = np.empty(len(predictions), dtype=np.float64)
 np.exp(predictions, out=out_pred)
 
