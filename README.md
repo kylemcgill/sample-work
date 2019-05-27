@@ -8,6 +8,21 @@ As of right now, this sample project scores in the Top 51% of the [Kaggle compet
 
  As of the time of this writing, I use a Kernal Ridge Regression simply because the cross validation look best for this model. I have not played around with different `alpha` with this model, but it is on the todo list.
 
+**Monte Carlo**
+
+A project centered around learning the monte carlo method to approximate integrals as well as learning how to use the method to simulate options pricing using simple models.  
+
+*coinflip*: The most simple monte carlo method for simulating a coin flip `N` times.
+
+*findpi*: Using the monte carlo method to estimate `PI` by randomly sampling the first quadrant of an inscribed unit circle.
+
+*stockprice*: Uses Brownian Motion to generate random price walks. In this example, the starting price and subsequent drft and variance were chosen at random.
+
+**opencv Tutorials**
+
+This repository is for the C++ implementation of the opencv tutorials to learn more about computer vision. This project is last on the priority list as it aims as a sandbox for practicing with a new tool.
+
+
 **Future Work**
 
-This repository is expected to grow over time as I attempt new public challenges. The hope is to attempt a variety of different datasets to develop my skills.
+Due to the terms and conditions for most of the Kaggle competitions being restrictive with the data, I am unlikely to continue posting that work here.  I will, however, try and expand my breadth of knowledge with toy problems in order to keep my skills fresh.  
