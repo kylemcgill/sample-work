@@ -4,9 +4,11 @@ The purpose of this repository is to showcase my development skills in python. A
 
 **Housing Price Prediction**
 
-As of right now, this sample project scores in the Top 51% of the [Kaggle competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) without doing much pre-processing. Since the housing prices are inherintly skewed due to the fact they can't be sold below 0 and in theory they could be sold for an infinite sum, the model predicts the log(sale_price). Future work for pre-processing includes looking for outliers in the data set as well as handling `NaN` values better. Currently, `NaN` values are replaced with the mode of a categorical column, or the mean for numerical columns.  I also have not corrected for skew for any of the numerical columns which might improve prediction.
+As of right now, this sample project scores in the Top 42% of the [Kaggle competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) without doing much pre-processing. Since the housing prices are inherintly skewed due to the fact they can't be sold below 0 and in theory they could be sold for an infinite sum, the model predicts the log(sale_price). Future work for pre-processing includes looking for outliers in the data set as well as handling `NaN` values better. Currently, `NaN` values are replaced with the mode of a categorical column, or the mean for numerical columns.  I also have not corrected for skew for any of the numerical columns which might improve prediction.
 
- As of the time of this writing, I use a Kernal Ridge Regression simply because the cross validation look best for this model. I have not played around with different `alpha` with this model, but it is on the todo list.
+ As of the time of this writing, I use a Kernal Ridge Regression simply because the cross validation look best for this model. You can see I search for a better alpha, a better algorithm would be to take the best cross validation scores and search closer around those `alpha`s which look promising.  
+ 
+ Further work will be to dive into pre-processing the data more and trying new models with this data to better understand why the ridge regression works better than the others.
 
 **Monte Carlo**
 
